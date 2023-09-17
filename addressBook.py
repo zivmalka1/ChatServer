@@ -3,7 +3,7 @@ COLUMNS = ['Name', 'IdNumber', 'UserName']
 
 
 class AddressBook:
-    def __init__(self, limit=1000):
+    def __init__(self, limit=10):
         """
         The constructor imports the users' db to a DataFrame
         """

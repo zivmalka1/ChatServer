@@ -98,17 +98,6 @@ class MsgSocket:
     def close(self):
         self.sock.close()
 
-    # receive_msg
-    # chunks = []
-    # bytes_received = 0
-    # self.sock.recv()
-    # while bytes_received < MSGLEN:
-    #     chunk = self.sock.recv(min(MSGLEN - bytes_received, 2048))
-    #     if chunk == b'':
-    #         raise RuntimeError("socket connection broken")
-    #     chunks.append(chunk)
-    #     bytes_received = bytes_received + len(chunk)
-    # return b''.join(chunks)
 
 
 
