@@ -5,6 +5,10 @@ import struct
 import pickle
 
 
+def get_hostname():
+    return socket.gethostname()
+
+
 class MsgSocket:
     def __init__(self, is_server=False, sock=None):
         self.is_server = is_server
@@ -28,7 +32,7 @@ class MsgSocket:
         conn, address = self.sock.accept()
         self.conn = conn
         self.address = address
-        return conn, address
+        return self, address
 
     def send_msg(self, content: str, sender: str, recipient: str):
         """
